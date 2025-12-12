@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashif Shekh | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #640D5F;
+            color: #ffffff;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            height: 60px;
+            background-color: #D91656;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 50px;
+            margin: 25px;
+        }
+
+        nav .left {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+        }
+
+        #main-title {
+            font-family: poppins;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        #sub-title {
+            font-size: .9rem;
+            font-weight: 400;
+            color: white;
+            margin-top: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+
+        }
+
+        nav ul li a {
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #D91656;
+        }
+
+        .contact-btn {
+            background-color: #FFB200;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            transication: 0.3s ease;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        /* HOME SECTION */
+        /* HOME SECTION */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .home-text h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #FFB200;
+        }
+
+        .home-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* PERFECT SQUARE IMAGE */
+        .home-img-wrapper {
+            width: 360px;
+            height: 360px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid #FFB200;
+
+            /* MOVE IMAGE TO THE RIGHT */
+            margin-left: 40px;
+            /* adjust: 20px, 30px, 50px as you want */
+        }
+
+
+        .home-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 35% center;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .home {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+
+
+        /* ABOUT SECTION */
+        .about {
+            background: linear-gradient(135deg, #7C0A7A, #640D5F);
+            padding: 50px 10%;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+            /* spacing from other sections */
+        }
+
+        .about .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #FFB200;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-intro {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #FFD966;
+            margin-bottom: 20px;
+        }
+
+        .about-details {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .about-details br {
+            margin-bottom: 8px;
+        }
+
+        .about-fun {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #FFEB99;
+            margin-top: 15px;
+        }
+
+
+
+
+        /* SKILLS SECTION */
+        .skills {
+            padding: 70px 10%;
+            background: linear-gradient(135deg, #640D5F, #7C0A7A);
+            /* gradient background */
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+        }
+
+        .skills .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #FFB200;
+            /* golden highlight */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Main Tech Skills Grid */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        /* Each Tech Skill Box */
+        .skill-box {
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #FFB200;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            cursor: default;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            background-color: #FFB200;
+            color: #640D5F;
+            /* background color of section */
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* BONUS SKILLS */
+        .bonus-skills {
+            margin-top: 25px;
+            padding: 12px 20px;
+            background-color: rgba(255, 178, 0, 0.2);
+            /* light golden transparent */
+            color: #FFB200;
+            border-left: 4px solid #FFB200;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .bonus-skills:hover {
+            background-color: rgba(255, 178, 0, 0.4);
+            /* subtle hover effect */
+        }
+
+
+        /* PROJECTS SECTION */
+        .projects-section {
+            padding: 70px 10%;
+            background-color: #7C0A7A;
+            /* gradient or solid background if you like */
+            border-radius: 20px;
+            margin: 40px 0;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects-section .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #FFB200;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        /* Project Card */
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #FFB200;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .project-card .tech-stack {
+            font-size: 0.9rem;
+            color: #FFD966;
+            font-weight: 500;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* CONTACT */
+        .contact p {
+            font-size: 1.1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .home {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .home-text,
+            .home img {
+                width: 100%;
+            }
+
+            .skills-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="left">
+            <span id="main-title">Ashif Shekh</span>
+            <span id="sub-title">Frontend Web Developer</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="home">
+        <div class="home-text">
+            <h2>Hello, I'm <span class="highlight">Ashif Shekh</span></h2>
+
+            <p>
+                A creative Web Developer specializing in clean UI, responsive design,
+                and smooth user experiences. Currently pursuing BCA.
+            </p>
+        </div>
+
+        <div class="home-img-wrapper">
+            <img src="aa.JPEG" alt="Ashif Image" class="home-img">
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="title">My Story</div>
+
+        <p class="about-intro">
+            Hello, I am ASHIF SHEKH, currently a BCA student and a video editor, starting my freelance journey in video
+            editing.
+        </p>
+
+        <p class="about-details">
+            I am currently pursuing BCA and have worked on multiple projects, including two major ones:
+        <ul>
+            <li>1. A MERN Stack project</li>
+            <li>2. A PHP project for an online bike and scooter selling store.</li>
+            <br>Both projects had three main modules: Admin, Customer, and Supplier. I am passionate about building
+            functional, responsive applications and constantly learning new technologies to enhance my skills.
+        </ul>
+        </p>
+
+        <p class="about-fun">
+            I love solving problems with code.
+        </p>
+    </section>
+
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="title">Skills</div>
+
+        <!-- Main Tech Skills -->
+        <div class="skills-list">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">React</div>
+            <div class="skill-box">Node.js</div>
+            <div class="skill-box">MongoDB</div>
+        </div>
+
+        <!-- Bonus Skills -->
+        <div class="bonus-skills">
+            <p>Bonus Skills: Video Editing, Gaming, YouTuber, Chess</p>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+        <div class="title">Projects</div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1 Image">
+                <h3>Online Bike & Scooter Store</h3>
+                <p>A PHP project with three main modules: Admin, Customer, and Supplier.</p>
+                <p class="tech-stack">Tech: PHP, MySQL, HTML, CSS, JS</p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2 Image">
+                <h3>MERN Stack Project</h3>
+                <p>A full-stack MERN application demonstrating CRUD operations and authentication.</p>
+                <p class="tech-stack">Tech: MongoDB, Express, React, Node.js</p>
+            </div>
+
+            <!-- Project 3 (Optional) -->
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3 Image">
+                <h3>Travel Landing Page</h3>
+                <p>A Travel PLace Landing Page using Pure Html & Css</p>
+                <p class="tech-stack">Tech: HTML, CSS</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <div class="title">Education</div>
+        <p>Write your educational background here.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="title">Contact Me</div>
+        <p>Email: yourmail@gmail.com</p>
+        <p>Phone: 1234567890</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Ashif | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
