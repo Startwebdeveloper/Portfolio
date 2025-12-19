@@ -340,20 +340,162 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
+        /* EDUCATION SECTION */
+        .education-section {
+            padding: 70px 10%;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
 
-        /* CONTACT */
-        .contact p {
+        .education-section .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #FFB200;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .edu-box {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .edu-box h2 {
+            font-size: 1.7rem;
+            color: #FFD966;
+        }
+
+        .edu-box h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .edu-box .year {
+            margin-top: 4px;
+            font-size: 1rem;
+            color: #FFB200;
+            font-weight: bold;
+        }
+
+        .edu-details {
+            margin-top: 15px;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .edu-details li {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 70px 10%;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .contact-section .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FFB200;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
             font-size: 1.1rem;
+            line-height: 1.8;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000;
-            color: #fff;
-            margin-top: 30px;
+        .contact-box strong {
+            color: #FFD966;
         }
+
+
+        /* FOOTER SAME AS NAVBAR */
+        .footer {
+            background-color: #D91656;
+            /* Same color as navbar */
+            padding: 4px 0;
+            margin: 0px;
+            /* Same rounded look */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .footer-menu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .footer-menu li a:hover {
+            background-color: white;
+            border-radius: 20px;
+            color: #D91656;
+            /* Same hover as navbar */
+        }
+
+        .footer-copy {
+            color: white;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin: 4px 0;
+        }
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background-color: #FFB200;
+    color: #640D5F;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: white;
+    color: #D91656;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -415,6 +557,10 @@
                 A creative Web Developer specializing in clean UI, responsive design,
                 and smooth user experiences. Currently pursuing BCA.
             </p>
+            <a href="resume.pdf" target="_blank" class="resume-btn">
+                Resume
+            </a>
+
         </div>
 
         <div class="home-img-wrapper">
@@ -502,23 +648,71 @@
     </section>
 
 
-    <!-- EDUCATION -->
-    <section id="education">
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section">
         <div class="title">Education</div>
-        <p>Write your educational background here.</p>
+
+        <!-- BCA -->
+        <div class="edu-box">
+            <h2>Bachelor of Computer Applications (BCA)</h2>
+            <h3>Dolat-Usha Institute of Applied Sciences Collage, Valsad</h3>
+            <p class="year">2023 – 2026</p>
+
+            <ul class="edu-details">
+                <li>Learning full-stack development and computer fundamentals.</li>
+                <li>Built two major projects: MERN Stack & PHP Store System.</li>
+                <li>Active in coding, project building, and tech events.</li>
+            </ul>
+        </div>
+
+        <!-- 12th (HSC) -->
+        <div class="edu-box">
+            <h2>XII | Science Stream with Maths</h2>
+            <h3>RGAS High School , Vapi</h3>
+            <p class="year">Passed: 2023</p>
+
+            <ul class="edu-details">
+                <li>Percentage: 68%</li>
+
+            </ul>
+        </div>
+
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
         <div class="title">Contact Me</div>
-        <p>Email: yourmail@gmail.com</p>
-        <p>Phone: 1234567890</p>
+
+        <div class="contact-box">
+            <p><strong>Email:</strong> ashif.developer@gmail.com</p>
+            <p><strong>Phone:</strong> 8780076894</p>
+
+            <!-- OPTIONAL SOCIAL -->
+            <p><strong>Instagram:</strong> @ashifstar_22</p>
+            <p><strong>GitHub:</strong>github.com/Startwebdeveloper</p>
+        </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Ashif | All Rights Reserved
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Ashif Shekh</div>
+
+            <ul class="footer-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <p class="footer-copy">© 2025 Ashif Shekh — All Rights Reserved.</p>
+        </div>
     </footer>
+
+
 
 </body>
 
